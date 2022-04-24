@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.PickingFragment">
+
+    <TextView
+        android:id="@+id/warehouse"
+        style="@style/warehouse_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="Warehouse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/branch"
+        layout="@layout/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/warehouse"
+        app:layout_constraintStart_toStartOf="@+id/warehouse"
+        app:layout_constraintTop_toBottomOf="@+id/warehouse" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="@+id/warehouse"
+        app:layout_constraintStart_toStartOf="@+id/warehouse"
+        app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_picking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="70dp"
+        android:paddingEnd="70dp"
+        android:text="@string/start_picking"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/warehouse"
+        app:layout_constraintStart_toStartOf="@+id/warehouse"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

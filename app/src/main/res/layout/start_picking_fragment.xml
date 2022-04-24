@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ui.StartPickingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/warehouse"
+            style="@style/warehouse_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:text="Warehouse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/branch"
+            style="@style/branch_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Branch"
+            app:layout_constraintEnd_toEndOf="@+id/warehouse"
+            app:layout_constraintStart_toStartOf="@+id/warehouse"
+            app:layout_constraintTop_toBottomOf="@+id/warehouse" />
+
+        <include
+            android:id="@+id/item_code"
+            layout="@layout/barcode_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/warehouse"
+            app:layout_constraintStart_toStartOf="@+id/warehouse"
+            app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+        <include
+            android:id="@+id/item_description"
+            layout="@layout/item_description_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/warehouse"
+            app:layout_constraintStart_toStartOf="@+id/warehouse"
+            app:layout_constraintTop_toBottomOf="@+id/item_code" />
+
+        <include
+            android:id="@+id/production_date"
+            layout="@layout/production_date_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/warehouse"
+            app:layout_constraintStart_toStartOf="@+id/warehouse"
+            app:layout_constraintTop_toBottomOf="@+id/item_description" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/qty"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/quantity"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/warehouse"
+            app:layout_constraintStart_toStartOf="@+id/warehouse"
+            app:layout_constraintTop_toBottomOf="@+id/production_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="number"
+                android:digits="0123456789"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:cornerRadius="30dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/picking_list"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qty" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/picking_list"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/picking_list"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/save"
+            app:layout_constraintTop_toBottomOf="@+id/qty" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

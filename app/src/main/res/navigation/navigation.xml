@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.juhayna.Ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/splashFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_left_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.juhayna.Ui.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFragment_to_pickingFragment"
+            app:destination="@id/pickingFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_shippingFragment"
+            app:destination="@id/shippingFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_productionFragment"
+            app:destination="@id/productionFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_SAPWorkOrderFragment"
+            app:destination="@id/SAPWorkOrderFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+        <action
+            android:id="@+id/action_mainMenuFragment_to_warehouseFragment"
+            app:destination="@id/warehouseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SAPWorkListFragment"
+        android:name="com.example.juhayna.Ui.SAPWorkListFragment"
+        android:label="s_a_p_work_list_fragment"
+        tools:layout="@layout/s_a_p_work_list_fragment" >
+        <action
+            android:id="@+id/action_SAPWorkListFragment_to_receivedListFragment"
+            app:destination="@id/receivedListFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/SAPWorkOrderFragment"
+        android:name="com.example.juhayna.Ui.SAPWorkOrderFragment"
+        android:label="s_a_p_work_order_fragment"
+        tools:layout="@layout/s_a_p_work_order_fragment" >
+        <action
+            android:id="@+id/action_SAPWorkOrderFragment_to_SAPWorkListFragment"
+            app:destination="@id/SAPWorkListFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/warehouseReceivingFragment"
+        android:name="com.example.juhayna.Ui.WarehouseReceivingFragment"
+        android:label="warehouse_receiving_fragment"
+        tools:layout="@layout/warehouse_receiving_fragment" >
+        <action
+            android:id="@+id/action_warehouseReceivingFragment_to_receivedListFragment"
+            app:destination="@id/receivedListFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/receivedListFragment"
+        android:name="com.example.juhayna.Ui.ReceivedListFragment"
+        android:label="received_list_fragment"
+        tools:layout="@layout/received_list_fragment" />
+    <fragment
+        android:id="@+id/putAwayFragment"
+        android:name="com.example.juhayna.Ui.PutAwayFragment"
+        android:label="put_away_fragment"
+        tools:layout="@layout/put_away_fragment" />
+    <fragment
+        android:id="@+id/createProductionOrderFragment"
+        android:name="com.example.juhayna.Ui.CreateProductionOrderFragment"
+        android:label="create_production_order_fragment"
+        tools:layout="@layout/create_production_order_fragment" >
+        <action
+            android:id="@+id/action_createProductionOrderFragment_to_ordersListFragment"
+            app:destination="@id/ordersListFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pickingFragment"
+        android:name="com.example.juhayna.Ui.PickingFragment"
+        android:label="picking_fragment"
+        tools:layout="@layout/picking_fragment" >
+        <action
+            android:id="@+id/action_pickingFragment_to_startPickingFragment"
+            app:destination="@id/startPickingFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/shippingFragment"
+        android:name="com.example.juhayna.Ui.ShippingFragment"
+        android:label="shipping_fragment"
+        tools:layout="@layout/shipping_fragment" >
+        <action
+            android:id="@+id/action_shippingFragment_to_startShippingFragment"
+            app:destination="@id/startShippingFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/startPickingFragment"
+        android:name="com.example.juhayna.Ui.StartPickingFragment"
+        android:label="start_picking_fragment"
+        tools:layout="@layout/start_picking_fragment" >
+        <action
+            android:id="@+id/action_startPickingFragment_to_pickingListFragment"
+            app:destination="@id/pickingListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startShippingFragment"
+        android:name="com.example.juhayna.Ui.StartShippingFragment"
+        android:label="start_shipping_fragment"
+        tools:layout="@layout/start_shipping_fragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.juhayna.Ui.SignInFragment"
+        android:label="sign_in_fragment"
+        tools:layout="@layout/sign_in_fragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/productionFragment"
+        android:name="com.example.juhayna.Ui.ProductionFragment"
+        android:label="fragment_production"
+        tools:layout="@layout/fragment_production" >
+        <action
+            android:id="@+id/action_productionFragment_to_createProductionOrderFragment"
+            app:destination="@id/createProductionOrderFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+        <action
+            android:id="@+id/action_productionFragment_to_SAPWorkOrderFragment2"
+            app:destination="@id/SAPWorkOrderFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/ordersListFragment"
+        android:name="com.example.juhayna.Ui.OrdersListFragment"
+        android:label="orders_list_fragment"
+        tools:layout="@layout/orders_list_fragment" />
+    <fragment
+        android:id="@+id/pickingListFragment"
+        android:name="com.example.juhayna.Ui.PickingListFragment"
+        android:label="picking_list_fragment"
+        tools:layout="@layout/picking_list_fragment" />
+    <fragment
+        android:id="@+id/warehouseFragment"
+        android:name="com.example.juhayna.Ui.WarehouseFragment"
+        android:label="warehouse_fragment"
+        tools:layout="@layout/warehouse_fragment" >
+        <action
+            android:id="@+id/action_warehouseFragment_to_putAwayFragment"
+            app:destination="@id/putAwayFragment" />
+        <action
+            android:id="@+id/action_warehouseFragment_to_warehouseReceivingFragment"
+            app:destination="@id/warehouseReceivingFragment" />
+    </fragment>
+</navigation>

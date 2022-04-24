@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".Ui.MainMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        tools:context=".Ui.MainMenuFragment">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/production_order"
+            style="@style/main_menu_button_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/production_order"
+            app:icon="@drawable/work_order_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="30dp"
+            app:iconSize="100dp"
+            app:iconTint="#ffffff"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toStartOf="@+id/warehouse"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/warehouse"
+            style="@style/main_menu_button_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Warehouse"
+            app:icon="@drawable/warehouse"
+            app:iconGravity="textTop"
+            app:iconPadding="30dp"
+            app:iconSize="130dp"
+            app:iconTint="#ffffff"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/production_order"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/picking"
+            style="@style/main_menu_button_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/picking"
+            app:icon="@drawable/picking_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="30dp"
+            app:iconSize="120dp"
+            app:iconTint="#ffffff"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toStartOf="@+id/shipping"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/production_order" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/shipping"
+            style="@style/main_menu_button_style"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/shipping"
+            app:icon="@drawable/shipping_icon"
+            app:iconGravity="textTop"
+            app:iconPadding="30dp"
+            app:iconSize="120dp"
+            app:iconTint="#ffffff"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/picking"
+            app:layout_constraintTop_toBottomOf="@+id/warehouse" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

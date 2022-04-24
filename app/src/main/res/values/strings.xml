@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Juhayna</string>
+    <string name="work_order_receive">Work Order - Receive</string>
+    <string name="warehouse_receiving">Warehouse Receiving</string>
+    <string name="warehouse_put_away">Warehouse Put-Away</string>
+    <string name="work_order">Work Order</string>
+    <string name="create_work_order">Create Work Order</string>
+    <string name="save">Save</string>
+    <string name="plant">Plant</string>
+    <string name="sku">Sku</string>
+    <string name="order_type">Order type</string>
+    <string name="branch">Branch</string>
+    <string name="item">Item</string>
+    <string name="quantity">Quantity</string>
+    <string name="picking_list">Picking List</string>
+    <string name="issue_note_no">Issue Note No</string>
+    <string name="picking">Picking</string>
+    <string name="received_list">Received List</string>
+    <string name="shipping">Shipping</string>
+    <string name="start_picking">Start Picking</string>
+    <string name="start_shipping">Start Shipping</string>
+    <string name="sign_in">Sign in</string>
+    <string name="password">Password</string>
+    <string name="user_name">User name</string>
+    <string name="shipping_list">Shipping List</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="location_code">Location code</string>
+    <string name="cartons">Cartons</string>
+    <string name="units">Units</string>
+    <string name="pallets">Pallets</string>
+    <string name="pallet_code">Pallet Code</string>
+    <string name="production_order">Production Order</string>
+    <string name="production_line">Production line</string>
+</resources>
